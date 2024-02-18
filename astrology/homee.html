@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+      <!--   <img src="images/logooo.png"> -->
+         
+                       <!-- arayüz paneli-->
+            <nav>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="horoscopes.html">HOROSCOPES</a></li>
+                    <li><a href="birthchart.html">BIRTH CHART</a></li>
+                    <li><a href="compability.html">COMPATIBILITY RATE</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="#"><button type="button" class="login-btn ">aycanurmentes</button></a></li>
+                        <i class="fa-solid fa-bars"></i>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Homepage birth chart calculator  
+ 
+     <main class="chart-form birthchart-form full-width">
+       
+        <div class="center">
+          <h1>Create Your Astrology Birth Chart</h1>
+          <p>Create your free, personalized, and highly customizable birth chart (natal chart) by filling in the form below. Using our tools you can hide/show planets and asteroids, choose a house system, customize orbs, show declinations, sidereal charts and more...</p>
+        </div>
+ 
+        <div>
+          <div class="form-container inner-wrap">
+            <div class="flex">
+                <div>
+                 <form id="add_chart_form" action="/tools/birth_chart/" method="get">
+ 
+                   <h2 class="uppercase">Fill in your details</h2>
+ 
+ <section>
+   <label for="your-name">
+     <span>My name is:</span>  
+   </label>
+   <input id="your-name" class="default-input full-width-input name" name="name" autocomplete="off" aria-label="My name is"/>
+ </section>
+ 
+ <section>
+   <label class="select-locations" for="your-geolocation">
+     <span>I was born in:</span>
+   </label>
+   <input id="your-geolocation" name="location" class="default-input full-width-input geolocation" placeholder="City, state, country" autocomplete="off" onfocus="this.setAttribute('autocomplete', 'off');" aria-label="I was born in"/>
+ </section>
+ 
+ <input name="geo_pk" class="hidden_input geo_pk" type="hidden">
+ <input name="date" class="hidden_input date" type="hidden">
+ <input name="place" class="hidden_input place" type="hidden">
+ 
+ <section class="date-container">
+   <div>
+     <span>My date of birth is:</span>
+   </div>
+ 
+   <div>
+     <div class="date-group">
+       <label for="your-month" style="display:none">Month</label>
+       <input id="your-month" class="form-control input month center-align" type="text" inputmode="numeric" placeholder="MM" maxlength="2" pattern="\d*" name="month" autocomplete="off" />
+       <span class='date-slash'>/</span>
+       <label for="your-day" style="display:none">Day</label>
+       <input id="your-day" class="form-control input day center-align" type="text" inputmode="numeric" placeholder="DD" maxlength="2" pattern="\d*" name="day" autocomplete="off" />
+       <span class='date-slash'>/</span>
+       <label for="your-year" style="display:none">Year</label>
+       <input id="your-year" class="form-control input year center-align" type="text" inputmode="numeric" placeholder="YYYY" maxlength="4" pattern="\d*" name="year" autocomplete="off" />
+     </div>
+     <div class="time-group">
+       <label for="your-hour" style="display:none">Hour</label>
+       <input id="your-hour" class="hour" placeholder="hh" type="text" inputmode="numeric" maxlength="2" pattern="\d*" name="hour" autocomplete="off" />
+       <span class='time-colon'>:</span>
+       <label for="your-min" style="display:none">Min</label>
+       <input id="your-min" class="min" placeholder="mm" type="text" inputmode="numeric" maxlength="2" pattern="\d*" name="min" autocomplete="off" />
+       
+       <label class="radio radio-before">
+         <span class="radio__input">
+           <input type="radio" name="timeRadio" value="am" data-toggle="radio" data-radiocheck-toggle="radio" />
+         </span>
+         <span class="radio__label">AM</span>
+       </label>
+ 
+       <label class="radio radio-before">
+         <span class="radio__input">
+           <input type="radio" name="timeRadio" value="pm" data-toggle="radio" data-radiocheck-toggle="radio" checked="checked"/>
+         </span>
+         <span class="radio__label">PM</span>
+       </label>
+     </div>
+   </div>
+ </section>
+ 
+ <div class="error"></div>
+ 
+                   <button id="create_chart" class="btn-full" type="submit">Create Chart</button>
+                 </form>
+                </div>
+ 
+                <div class="illustration-form">
+                   <img
+                     width="480"
+                     height="418"
+                     src='https://assets.astro-charts.com/site/illustration-form.webp' 
+                     srcset='https://assets.astro-charts.com/site/illustration-form.webp,
+                             https://assets.astro-charts.com/site/illustration-form@2x.webp 2x'
+                     alt="illustration of two women shoulder-to-shoulder relaxing underneath a warm sun" />
+                </div>
+            </div> 
+          </div> 
+        </div>
+      </main
+<!-- main page -->
+<div class="main-section">
+   <div class="box">
+      <div class="box-content col-md-4">
+       <h2>Understand a relationship's compatibility by overlaying two birth charts.</h2>
+       <img src="images/second.webp" alt="Second Image" class="box-img">
+       <p><a href="compability.html">See more</a></p>
+      </div>
+   </div> 
+   <div class="box">
+       <div class="box-content col-md-4">
+           <h2>Discover your astrological planetary positions, aspects, patterns, and more.</h2>
+           <img src="images/first.webp" alt="First Image" class="box-img">
+           <p><a href="birthchart.html">See more</a></p>
+          </div>
+   </div>
+   <div class="box">
+       <div class="box-content col-md-4">
+           <h2>You can find everthing about us! Give your opinions also! </h2>
+           <img src="images/third.webp" alt="Third Image" class="box-img">
+           <p><a href="aboutus.html">See more</a></p>
+          </div>
+   </div>
+</div>
+
+      <!-- Celebrity sun sign module  -->
+     
+      <section class="celeb_sun_module">
+         <div class="section-headline">
+            <h2>Charts By Sun Sign</h2>
+         </div>
+         
+            <div class="grid aboveMin">
+               <div>
+                  <a href="#gotoaries">
+                     <div class="cluster">
+                        <div>
+                           <img width="80" height="80" class="lazyload" src="images/ari.png" alt="aries">
+                           <div>
+                              <p>Aries</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div>
+                  <a href="#gototaurus">
+                     <div class="cluster">
+                        <div class="col-sm-4">
+                           <img width="80" height="80" class="lazyload" src="images/tau.png" alt="taurus">
+                           <div>
+                             <p>Taurus</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div>
+                  <a href="#gotogemini">
+                     <div class="cluster">
+                        <div class="col-sm-4" >
+                           <img width="80" height="80" class="lazyload" src="images/gem.png" alt="gemini">
+                           <div>
+                             <p>Gemini</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div>
+                  <a href="#gotocancer">
+                     <div class="cluster">
+                        <div>
+                           <img width="80" height="80" class="lazyload" src="images/can.png" alt="cancer">
+                           <div>
+                             <p>Cancer</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div>
+                  <a href="#gotoleo">
+                     <div class="cluster">
+                        <div>
+                           <img width="80" height="80" background-color="transperent" class="lazyload" src="images/le.png" alt="leo">
+                           <div>
+                             <p>Leo</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div>
+                  <a href="#gotovirgo">
+                     <div class="cluster">
+                        <div>
+                           <img width="80" height="80" class="lazyload" src="images/vir.png" alt="virgo">
+                           <div>
+                             <p>Virgo</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div>
+                  <a href="#gotolibra">
+                     <div class="cluster">
+                        <div>
+                           <img width="80" height="80" class="lazyload" src="images/lib.png" alt="libra">
+                           <div>
+                             <p>Libra</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div>
+                  <a href="#gotoscorpio">
+                     <div class="cluster">
+                        <div>
+                           <img width="80" height="80" class="lazyload" src="images/scor.png" alt="scorpio">
+                           <div>
+                             <p>Scorpio</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div>
+                  <a href="#gotosagittarius">
+                     <div class="cluster">
+                        <div>
+                           <img width="80" height="80" class="lazyload" src="images/sagi.png" alt="sagittarius">
+                           <div>
+                             <p>Sagittarius</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div>
+                  <a href="#gotocapricorn">
+                     <div class="cluster">
+                        <div>
+                           <img width="80" height="80" class="lazyload" src="images/capri.png" alt="capricorn">
+                           <div>
+                             <p>Capricorn</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div>
+                  <a href="#gotoaquarius">
+                     <div class="cluster">
+                        <div>
+                           <img width="80" height="80" class="lazyload" src="images/aqua.png" alt="aquarius">
+                           <div>
+                              <p>Aquarius</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div>
+                  <a href="#gotopisces">
+                     <div class="cluster">
+                        <div>
+                           <img width="80" height="80" class="lazyload" src="images/pis.png" alt="pisces">
+                           <div>
+                             <p>Pisces</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         
+      </section>
+ 
+ <!-- burç uyum hesaplama
+ <div class="compatibility-form">
+   <h1>Horoscope Compatibility Calculation</h1>
+   <form id="compatibility-form">
+      <label for="relationship-type">Type:</label>
+       <select id="relationship-type" name="relationship-type">
+         <option value="aries">Love</option>
+         <option value="taurus">Business Relationship</option>
+         <option value="gemini">Friendship</option>
+       </select>
+
+
+
+       <label for="sign1">1.Sign:</label>
+       <select id="sign1" name="sign1">
+           <option value="aries">Aries</option>
+           <option value="taurus">Taurus</option>
+           <option value="gemini">Gemini</option>
+           <option value="cancer">Cancer</option>
+           <option value="leo">Leo</option>
+           <option value="virgo">Virgo</option>
+           <option value="libra">Libra</option>
+           <option value="scorpio">Scorpio</option>
+           <option value="sagittarius">Sagittarius</option>
+           <option value="capricorn">Capricorn</option>
+           <option value="aquarius">Aquarius</option>
+           <option value="pisces">Pisces</option>
+          
+       </select>
+
+       <label for="sign2">2.Sign:</label>
+       <select id="sign2" name="sign2">
+         <option value="aries">Aries</option>
+         <option value="taurus">Taurus</option>
+         <option value="gemini">Gemini</option>
+         <option value="cancer">Cancer</option>
+         <option value="leo">Leo</option>
+         <option value="virgo">Virgo</option>
+         <option value="libra">Libra</option>
+         <option value="scorpio">Scorpio</option>
+         <option value="sagittarius">Sagittarius</option>
+         <option value="capricorn">Capricorn</option>
+         <option value="aquarius">Aquarius</option>
+         <option value="pisces">Pisces</option>
+       </select>
+
+       <button type="button" id="calculate-button">Calculate</button>
+   </form>
+   <div id="result"></div>
+   --->
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

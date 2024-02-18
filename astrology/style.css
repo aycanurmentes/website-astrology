@@ -1,0 +1,844 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font: 100%/1.5 sans-serif;
+    line-height: 1.6;
+    font-family: var(--font-serif);
+    -webkit-font-smoothing: antialiased;
+    color: var(--text-black);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+    background-image: linear-gradient(rgba(230, 208, 208, 0.6),rgba(192, 191, 191, 0.6)),url(images/bg.png);
+    background-position: center;
+    background-size: cover;
+    
+}
+.contact{
+ 
+}
+.contact.navbar{
+    height: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact.navbar nav ul li a{
+    color: black;
+}
+.contact nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    column-gap: 8px;
+}
+.contact nav li{
+    margin: 0 20px;
+}
+.contact a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.contact ul li a{
+    color: black;
+    text-decoration: none;
+    transition: ease 0.5s;
+}
+.contact ul li a:hover{
+    color: navy;
+}
+
+
+/*contact end*/
+
+.container img{
+    background-color: transparent;
+}
+.navbar{
+    height: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar nav ul li a{
+    color: black;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    column-gap: 8px;
+}
+nav li{
+    margin: 0 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    transition: ease 0.5s;
+}
+nav ul li a:hover{
+    color: navy;
+}
+.fa-bars {
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Özelleştirilebilir */
+}
+/* Mobil menü stil tanımlamaları */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .fa-bars {
+        display: inline-block; /* Özelleştirilebilir */
+    }
+}
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+    line-height: 6vh;
+    font-family: var(--font-serif-bold);
+    color: black;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.center{
+    width: 100%;
+}
+.center p {
+    color: text gray;
+    max-width: 100rem;
+    margin: 0 auto;
+   
+
+}
+.flex{
+    width:100%;
+    height: auto;
+}
+button {
+    background-color: var(--button-primary);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: var(--s-1) var(--s3);
+    border: none;
+    font-family: var(--font-sans-serif);
+    color: #fff;
+    letter-spacing: .08em;
+    cursor: pointer;
+}
+.btn-full {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+p:first-of-type, p:only-of-type {
+    margin: 0;
+}
+section-headline {
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: var(--s-1);
+    letter-spacing: .08rem;
+    font-weight: 500;
+    font-size: .8rem;
+    font-family: var(--font-sans-serif);
+    
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color:#333;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font: 100%/1.5 sans-serif;
+    line-height: 1.6;
+    font-family: var(--font-serif);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.celeb_sun_module img {
+    max-width: 80px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    border-style:none;
+    width: 80px;
+    aspect-ratio: auto 80 / 80;
+    height: 80px;
+    /*
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    */
+}
+.cluster {
+    --space: 1rem;
+    flex-basis:50% ;
+}
+a {
+    text-decoration: none;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+/*
+.celeb_sun_module .grid {
+    --min: 15rem;
+}
+.celeb_sun_module .grid {
+    --min: 7rem;
+}
+*/
+ /* form işlemi için */
+ /* Genel stil tanımlamaları */
+ .frame {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+}
+.chart-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 2px;
+}
+
+.chart-form h1 {
+    font-size: 28px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.chart-form p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Form stil tanımlamaları */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+}
+
+.form-container form {
+    width: 70%;
+}
+
+/* Üstteki formun stil tanımlamaları */
+.uppercase {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+section {
+    margin: 20px 0;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.select-locations input[type="text"] {
+    font-size: 14px;
+}
+
+/* Gizli input stil tanımlamaları */
+.hidden_input {
+    display: none;
+}
+
+/* Tarih seçenekleri stil tanımlamaları */
+.date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date-group {
+    display: flex;
+    align-items: center;
+}
+
+.date-slash {
+    margin: 0 10px;
+}
+/* Allow only numeric input and hide spinners for day, month, and year fields */
+.date-group input[type="text"][inputmode="numeric"] {
+    width: 40px; /* You can adjust the width as needed */
+    text-align: center;
+    -moz-appearance: textfield;
+}
+
+.date-group input[type="text"]::-webkit-inner-spin-button,
+.date-group input[type="text"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.time-group {
+    display: flex;
+    align-items: center;
+}
+
+.hour,
+.min {
+    display: inline-block;
+    max-width: 100%;
+    box-sizing: border-box; /* Box modelini düzeltmek için */
+    padding: 5px;
+}
+
+.time-colon {
+    margin: 0 5px;
+}
+
+.radio {
+    display: inline-block;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 16px;
+}
+.radio__label {
+    margin-left: 1px;
+}
+.radio-group{
+    display: flex;
+  gap: 10px;
+    overflow: hidden;
+}
+
+/* Hata mesajı stil tanımlamaları */
+.error {
+    color: red;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Buton stil tanımlamaları */
+.btn-full {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #ff6600; /* Değiştirmek istediğiniz renk */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-full:hover {
+    background-color: #ff4400; /* Değiştirmek istediğiniz renk */
+}
+
+/* İllüstrasyon resmi stil tanımlamaları */
+.illustration-form {
+    width: 50%;
+}
+
+.illustration-form img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Genel stil tanımlamaları */
+
+/* burçların tıklanıp özellikleri */
+.celeb_sun_module {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Başlık stil tanımlamaları */
+.celeb_sun_module .section-headline h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Grid ve cluster stil tanımlamaları */
+.celeb_sun_module .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.celeb_sun_module .cluster {
+    text-align: center;
+    margin: 10px;
+}
+
+/* Cluster içindeki resim stil tanımlamaları */
+.celeb_sun_module img.lazyload {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    transition: border-color 0.3s;
+}
+
+.celeb_sun_module .cluster:hover img.lazyload {
+    border-color: #ff6600; /* Değiştirmek istediğiniz renk */
+}
+
+/* Cluster içindeki metin stil tanımlamaları */
+.celeb_sun_module p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+.grid {
+    --min: 15rem;
+    --space: 1rem;
+    align-content: start;
+    display: grid;
+    gap: var(--space);
+    grid-template-columns: 100%;
+    padding-left: var(--s-1);
+}
+body {
+    overflow: hidden;
+    font: 100%/1.5 sans-serif;
+    line-height: 1.6;
+    font-family: var(--font-serif);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.lazyload{
+    height: 300px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem; 
+}
+/* burç uyumu */
+.compatibility-form{
+    background:local;
+}
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.sign-dates h3 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+.sign-meanings h3 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+.login-form{
+    background:local;
+
+}
+#login-form {
+    width: 100%;
+    max-width: 400px; /* İstediğiniz bir maksimum genişlik belirleyebilirsiniz */
+    margin: 0 auto; /* Formu sayfanın ortasına alır */
+    padding: 20px; /* İstediğiniz bir iç kenar boşluğu belirleyebilirsiniz */
+    box-sizing: border-box; /* Padding ve border'ları genişlik içine dahil eder */
+}
+img.aboutus-lazyload{
+    width: 100%;
+    height: 100vh; /* Ekran yüksekliğine göre ayarlayabilirsiniz */
+    object-fit: contain;
+
+}
+.main-section {
+    overflow: hidden; /* Clearfix */
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    flex: 1;
+    float: left;
+    width: 33.33%; /* İki kutunun yatayda yer alması için 1/3 oranında genişlik */
+    box-sizing: border-box;
+}
+
+.box-content {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.box-img {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Ekran daraldığında kutuların üst üste gelmemesi için @media query */
+@media (max-width: 768px) {
+    .box {
+        width: 100%;
+    }
+}
+
+/*contact kısmı*/
+
+
+/*signin signup forgotpas kısmı */
+.etc-login-form {
+    color: #919191;
+    padding: 10px 20px;
+  }
+  .etc-login-form p {
+    margin-bottom: 5px;
+  }
+  /*=== 4. Main Form ===*/
+  .login-form-1 {
+    max-width: 300px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  .main-login-form {
+    position: relative;
+  }
+  .login-form-1 .form-control {
+    border: 0;
+    box-shadow: 0 0 0;
+    border-radius: 0;
+    background: transparent;
+    color: #555555;
+    padding: 7px 0;
+    font-weight: bold;
+    height:auto;
+  }
+  .login-form-1 .form-control::-webkit-input-placeholder {
+    color: #999999;
+  }
+  .login-form-1 .form-control:-moz-placeholder,
+  .login-form-1 .form-control::-moz-placeholder,
+  .login-form-1 .form-control:-ms-input-placeholder {
+    color: #999999;
+  }
+  .login-form-1 .form-group {
+    margin-bottom: 0;
+    border-bottom: 2px solid #efefef;
+    padding-right: 20px;
+    position: relative;
+  }
+  .login-form-1 .form-group:last-child {
+    border-bottom: 0;
+  }
+  .login-group {
+    background: #ffffff;
+    color: #999999;
+    border-radius: 8px;
+    padding: 10px 20px;
+  }
+  .login-group-checkbox {
+    padding: 5px 0;
+  }
+  /*=== 5. Login Button ===*/
+  .login-form-1 .login-button {
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    background: #ffffff;
+    color: #999999;
+    padding: 11px 0;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    border: 5px solid #efefef;
+    border-radius: 50%;
+    transition: all ease-in-out 500ms;
+  }
+  .login-form-1 .login-button:hover {
+    color: #555555;
+    transform: rotate(450deg);
+  }
+  .login-form-1 .login-button.clicked {
+    color: #555555;
+  }
+  .login-form-1 .login-button.clicked:hover {
+    transform: none;
+  }
+  .login-form-1 .login-button.clicked.success {
+    color: #2ecc71;
+  }
+  .login-form-1 .login-button.clicked.error {
+    color: #e74c3c;
+  }
+  /*=== 6. Form Invalid ===*/
+  label.form-invalid {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    display: block;
+    margin-top: -25px;
+    padding: 7px 9px;
+    background: #777777;
+    color: #ffffff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 11px;
+  }
+  label.form-invalid:after {
+    top: 100%;
+    right: 10px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: transparent;
+    border-top-color: #777777;
+    border-width: 6px;
+  }
+  /*=== 7. Form - Main Message ===*/
+  .login-form-main-message {
+    background: #ffffff;
+    color: #999999;
+    border-left: 3px solid transparent;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    height: 0;
+    padding: 0 20px 0 17px;
+    opacity: 0;
+    transition: all ease-in-out 200ms;
+  }
+  .login-form-main-message.show {
+    height: auto;
+    opacity: 1;
+    padding: 10px 20px 10px 17px;
+  }
+  .login-form-main-message.success {
+    border-left-color: #2ecc71;
+  }
+  .login-form-main-message.error {
+    border-left-color: #e74c3c;
+  }
+  /*=== 8. Custom Checkbox & Radio ===*/
+  /* Base for label styling */
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked,
+  [type="radio"]:not(:checked),
+  [type="radio"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label,
+  [type="radio"]:not(:checked) + label,
+  [type="radio"]:checked + label {
+    position: relative;
+    padding-left: 25px;
+    padding-top: 1px;
+    cursor: pointer;
+  }
+  /* checkbox aspect */
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before,
+  [type="radio"]:not(:checked) + label:before,
+  [type="radio"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 17px;
+    height: 17px;
+    border: 0px solid #aaa;
+    background: #f0f0f0;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  /* checked mark aspect */
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after,
+  [type="radio"]:not(:checked) + label:after,
+  [type="radio"]:checked + label:after {
+    position: absolute;
+    color: #555555;
+    transition: all .2s;
+  }
+  /* checked mark aspect changes */
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+  [type="checkbox"]:checked + label:after,
+  [type="radio"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+  /* disabled checkbox */
+  [type="checkbox"]:disabled:not(:checked) + label:before,
+  [type="checkbox"]:disabled:checked + label:before,
+  [type="radio"]:disabled:not(:checked) + label:before,
+  [type="radio"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #8c8c8c;
+    background-color: #878787;
+  }
+  [type="checkbox"]:disabled:checked + label:after,
+  [type="radio"]:disabled:checked + label:after {
+    color: #555555;
+  }
+  [type="checkbox"]:disabled + label,
+  [type="radio"]:disabled + label {
+    color: #8c8c8c;
+  }
+  /* accessibility */
+  [type="checkbox"]:checked:focus + label:before,
+  [type="checkbox"]:not(:checked):focus + label:before,
+  [type="checkbox"]:checked:focus + label:before,
+  [type="checkbox"]:not(:checked):focus + label:before {
+    border: 1px dotted #f6f6f6;
+  }
+  /* hover style just for information */
+  label:hover:before {
+    border: 1px solid #f6f6f6 !important;
+  }
+  /*=== Customization ===*/
+  /* radio aspect */
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    border-radius: 3px;
+  }
+  [type="radio"]:not(:checked) + label:before,
+  [type="radio"]:checked + label:before {
+    border-radius: 35px;
+  }
+  /* selected mark aspect */
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    content: '✔';
+    top: 0;
+    left: 2px;
+    font-size: 14px;
+  }
+  [type="radio"]:not(:checked) + label:after,
+  [type="radio"]:checked + label:after {
+    content: '\2022';
+    top: 0;
+    left: 3px;
+    font-size: 30px;
+    line-height: 25px;
+  }
+  /*=== 9. Misc ===*/
+  .logo {
+    padding: 15px 0;
+    font-size: 25px;
+    color: #aaaaaa;
+    font-weight: bold;
+  }
+  .about p{
+    font-family: Arial, sans-serif;
+    background-color:transparent ;
+    margin: 0;
+    padding: 0;
+  }
+.main-login-form .login-button{
+    text-align: left;
+}

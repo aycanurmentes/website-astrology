@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="navbar">
+            <!--   <img src="images/logooo.png"> -->
+               
+                             <!-- arayüz paneli-->
+                  <nav>
+                      <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="horoscopes.html">HOROSCOPES</a></li>
+                        <li><a href="birthchart.html">BIRTH CHART</a></li>
+                        <li><a href="compability.html">COMPATIBILITY RATE</a></li>
+                        <li><a href="aboutus.html">ABOUT US</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="login.html"><button type="button" class="login-btn">Login</button></a></li>
+                            <i class="fa-solid fa-bars"></i>
+                        </a></li>
+                      </ul>
+                  </nav>
+              </div>
+
+               <!-- burç uyum hesaplama-->
+ <div class="compatibility-form">
+    <h1>Horoscope Compatibility Calculation</h1>
+    <form id="compatibility-form">
+       <label for="relationship-type">Type:</label>
+        <select id="relationship-type" name="relationship-type">
+          <option value="aries">Love</option>
+          <option value="taurus">Business Relationship</option>
+          <option value="gemini">Friendship</option>
+        </select>
+ 
+ 
+ 
+        <label for="sign1">1.Sign:</label>
+        <select id="sign1" name="sign1">
+            <option value="aries">Aries</option>
+            <option value="taurus">Taurus</option>
+            <option value="gemini">Gemini</option>
+            <option value="cancer">Cancer</option>
+            <option value="leo">Leo</option>
+            <option value="virgo">Virgo</option>
+            <option value="libra">Libra</option>
+            <option value="scorpio">Scorpio</option>
+            <option value="sagittarius">Sagittarius</option>
+            <option value="capricorn">Capricorn</option>
+            <option value="aquarius">Aquarius</option>
+            <option value="pisces">Pisces</option>
+           
+        </select>
+ 
+        <label for="sign2">2.Sign:</label>
+        <select id="sign2" name="sign2">
+          <option value="aries">Aries</option>
+          <option value="taurus">Taurus</option>
+          <option value="gemini">Gemini</option>
+          <option value="cancer">Cancer</option>
+          <option value="leo">Leo</option>
+          <option value="virgo">Virgo</option>
+          <option value="libra">Libra</option>
+          <option value="scorpio">Scorpio</option>
+          <option value="sagittarius">Sagittarius</option>
+          <option value="capricorn">Capricorn</option>
+          <option value="aquarius">Aquarius</option>
+          <option value="pisces">Pisces</option>
+        </select>
+ 
+        <button type="button" id="calculate-button">Calculate</button>
+    </form>
+    <div id="result"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Get references to form elements
+    var relationshipTypeSelect = document.getElementById("relationship-type");
+    var sign1Select = document.getElementById("sign1");
+    var sign2Select = document.getElementById("sign2");
+    var calculateButton = document.getElementById("calculate-button");
+    var resultDiv = document.getElementById("result");
+
+    // Event listener for the Calculate button
+    calculateButton.addEventListener("click", function () {
+        // Get selected values
+        var relationshipType = relationshipTypeSelect.value;
+        var sign1 = sign1Select.value;
+        var sign2 = sign2Select.value;
+
+        // Perform the compatibility calculation (replace this with your logic)
+        var compatibilityResult = calculateCompatibility(relationshipType, sign1, sign2);
+
+        // Display the result
+        resultDiv.innerText = "Compatibility Result: " + compatibilityResult;
+    });
+
+    // Function to calculate compatibility (replace this with your logic)
+    function calculateCompatibility(relationshipType, sign1, sign2) {
+        // Replace this logic with your actual compatibility calculation
+        return "This is a placeholder result. Implement your calculation logic here.";
+    }
+});
+</script>
+    </div>
+</body>
+</html>

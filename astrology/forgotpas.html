@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>,
+</head>
+<body>
+    
+    <div class="container">
+        <div class="text-center" style="padding:50px 0">
+            <div class="logo">forgot password</div>
+            <!-- Main Form -->
+            <div class="login-form-1">
+                <form id="forgot-password-form" class="text-left" onsubmit="submitForm(event)">
+                    <div class="etc-login-form">
+                        <p>When you fill in your registered email address, you will be sent instructions on how to reset your password.</p>
+                    </div>
+                    <div class="login-form-main-message" id="error-message"></div>
+                    <div class="main-login-form">
+                        <div class="login-group">
+                            <div class="form-group">
+                                <label for="fp_email" class="sr-only">Email address</label>
+                                <input type="text" class="form-control" id="fp_email" name="fp_email" placeholder="email address">
+                            </div>
+                        </div>
+                        <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                    </div>
+                    <div class="etc-login-form">
+                        <p>already have an account? <a href="login.html">login here</a></p>
+                        <p>new user? <a href="signup.html">create new account</a></p>
+                    </div>
+                </form>
+            </div>
+            <!-- end:Main Form -->
+        </div>
+    </div>
+    
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            var email = document.getElementById('fp_email').value;
+            var errorMessage = document.getElementById('error-message');
+    
+            // Check if the email field is empty
+            if (!email) {
+                errorMessage.innerHTML = 'Please enter your email address.';
+                return;
+            }
+    
+            // Check for valid email format
+            if (!isValidEmail(email)) {
+                errorMessage.innerHTML = 'Invalid email format. Please enter a valid email address.';
+                return;
+            }
+    
+            // Reset error message
+            errorMessage.innerHTML = '';
+    
+            // Simulate a message display and redirect after 5 seconds
+            displaySuccessMessage();
+            setTimeout(redirectToHomepage, 5000);
+        }
+    
+        function isValidEmail(email) {
+            // Simple check for '@' and '.com' in the email address
+            return email.includes('@') && email.includes('.com');
+        }
+    
+        function displaySuccessMessage() {
+            var successMessage = document.getElementById('error-message');
+            successMessage.innerHTML = 'Instructions sent to your email. Redirecting to the homepage in a 5 seconds...';
+        }
+    
+        function redirectToHomepage() {
+            // Replace 'your_homepage_url' with the actual URL of your homepage
+            window.location.href = 'index.html';
+        }
+    </script>
+    
+</body>
+</html>

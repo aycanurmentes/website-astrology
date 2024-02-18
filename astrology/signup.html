@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<!------ Include the above in your HEAD tag ---------->
+
+
+
+<div class="container">
+
+	<form>
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Full name" type="text">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Email address" type="email">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+		</div>
+		<select class="custom-select" style="max-width: 120px;">
+		    <option selected="">+971</option>
+		    <option value="1">+972</option>
+		    <option value="2">+198</option>
+		    <option value="3">+701</option>
+		</select>
+    	<input name="" class="form-control" placeholder="Phone number" type="text">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+		</div>
+		<select class="form-control">
+			<option selected=""> Select job type</option>
+			<option>Designer</option>
+			<option>Manager</option>
+			<option>Accaunting</option>
+		</select>
+	</div> <!-- form-group end.// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input class="form-control" placeholder="Create password" type="password">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input class="form-control" placeholder="Repeat password" type="password">
+    </div> <!-- form-group// -->   
+	<div class="form-group login-group-checkbox">
+		<input type="radio" class="" name="reg_gender" id="male" placeholder="username">
+		<label for="male">male</label>
+		
+		<input type="radio" class="" name="reg_gender" id="female" placeholder="username">
+		<label for="female">female</label>
+	</div>                                   
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+    </div> <!-- form-group// -->  
+		
+					
+					<div class="form-group login-group-checkbox">
+						<input type="checkbox" class="" id="reg_agree" name="reg_agree">
+						<label for="reg_agree">i agree with <a href="#">terms</a></label>
+					</div>    
+    <p class="text-center">Have an account? <a href="login.html">Log In</a> </p>    
+
+</form>
+</article>
+</div> <!-- card.// -->
+
+</div> 
+<!--container end.//-->
+<script>
+    function validateForm() {
+        var fullName = document.getElementById('fullName').value;
+        var email = document.getElementById('email').value;
+        var phoneNumber = document.getElementById('phoneNumber').value;
+        var jobType = document.getElementById('jobType').value;
+        var password = document.getElementById('password').value;
+        var repeatPassword = document.getElementById('repeatPassword').value;
+        var gender = document.querySelector('input[name="reg_gender"]:checked');
+
+        var errorDiv = document.getElementById('errorMessages');
+        errorDiv.innerHTML = ''; // Clear previous error messages
+
+        // Custom validation logic
+        if (!fullName || !email || !phoneNumber || jobType === 'Select job type' || !password || !repeatPassword || !gender) {
+            errorDiv.innerHTML = 'Please fill in all registration fields.';
+            return;
+        }
+
+        if (password !== repeatPassword) {
+            errorDiv.innerHTML = 'Passwords do not match.';
+            return;
+        }
+
+        if (!document.getElementById('reg_agree').checked) {
+            errorDiv.innerHTML = 'Please agree to the terms.';
+            return;
+        }
+
+        // If all validation passes, you can redirect to the homepage
+        window.location.href = 'index.html'; // Replace 'your_homepage_url' with the actual URL of your homepage
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+      <!--   <img src="images/logooo.png"> -->
+         
+                       <!-- arayüz paneli-->
+            <nav>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="horoscopes.html">HOROSCOPES</a></li>
+                    <li><a href="birthchart.html">BIRTH CHART</a></li>
+                    <li><a href="compability.html">COMPATIBILITY RATE</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="login.html"><button type="button" class="login-btn">Login</button></a></li>
+                        <i class="fa-solid fa-bars"></i>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+
+         <!-- Homepage birth chart calculator  -->
+     <main class="chart-form birthchart-form full-width">
+       
+        <div class="center">
+          <h1>Create Your Astrology Birth Chart</h1>
+          <p>Create your free, personalized, and highly customizable birth chart (natal chart) by filling in the form below. Using our tools you can hide/show planets and asteroids, choose a house system, customize orbs, show declinations, sidereal charts and more...</p>
+        </div>
+ 
+        <div>
+          <div class="form-container inner-wrap">
+            <div class="flex">
+                <div>
+                 <form id="add_chart_form" action="" method="get">
+ 
+                   <h2 class="uppercase">Fill in your details</h2>
+ 
+ <section>
+   <label for="your-name">
+     <span>My name is:</span>  
+   </label>
+   <input id="your-name" class="default-input full-width-input name" name="name" autocomplete="off" aria-label="My name is"/>
+ </section>
+ 
+ <section>
+   <label class="select-locations" for="your-geolocation">
+     <span>I was born in:</span>
+   </label>
+   <input id="your-geolocation" name="location" class="default-input full-width-input geolocation" placeholder="City, state, country" autocomplete="off" onfocus="this.setAttribute('autocomplete', 'off');" aria-label="I was born in"/>
+ </section>
+ 
+ <input name="geo_pk" class="hidden_input geo_pk" type="hidden">
+ <input name="date" class="hidden_input date" type="hidden">
+ <input name="place" class="hidden_input place" type="hidden">
+ 
+ <section class="date-container">
+   <div>
+     <span>My date of birth is:</span>
+   </div>
+   <div>
+     <div class="date-group">
+       <label for="monthSelector" style="display:none">Month</label>
+       <select id="monthSelector" class="form-control input month center-align" type="text" inputmode="numeric" placeholder="Month" maxlength="2" pattern="\d*" name="month" autocomplete="off" >
+        <option value="" disabled selected hidden>Month</option>
+       </select>
+       <span class='date-slash'>/</span>
+       <label for="daySelector" style="display:none">Day</label>
+       <select id="daySelector" class="form-control input day center-align" type="text" inputmode="numeric" placeholder="DD" maxlength="2" pattern="\d*" name="day" autocomplete="off">
+        <option value="" disabled selected hidden>Day</option>
+       </select>
+       <span class='date-slash'>/</span>
+       <label for="yearSelector" style="display:none">Year</label>
+       <select id="yearSelector" class="form-control input year center-align" type="text" inputmode="numeric" placeholder="YYYY" maxlength="4" pattern="\d*" name="year" autocomplete="off">
+        <option value="" disabled selected hidden>Year</option>
+       </select>
+     </div>
+     <div class="time-group">
+       <label for="hourSelector" style="display:none">Hour</label>
+       <select id="hourSelector" class="hour" placeholder="hh" type="text" inputmode="numeric" maxlength="2" pattern="\d*" name="hour" autocomplete="off" >
+        <option value="" disabled selected hidden>Hour</option>
+       </select>
+       <span class='time-colon'>:</span>
+       <label for="minSelector" style="display:none">Min</label>
+       <select id="minSelector" class="min" placeholder="mm" type="text" inputmode="numeric" maxlength="2" pattern="\d*" name="min" autocomplete="off" >
+        <option value="" disabled selected hidden>Minute</option>
+       </select>
+      
+     </div>
+     <div class="radio-group">
+      <input type="radio" id="amRadio" name="timeRadio" value="am" checked="checked">
+      <label for="amRadio">AM</label>
+  
+      <input type="radio" id="pmRadio" name="timeRadio" value="pm">
+      <label for="pmRadio">PM</label>
+    </div>
+  </div>
+ </section>
+ 
+ <div class="error"></div>
+ 
+                  <!--
+                   <button id="create_chart" class="btn-full" type="submit">Create Chart</button>
+                  --> 
+                   <button id="create_chart" class="btn-full" type="button" onclick="validateForm()">Create Chart</button>
+                 </form>
+                </div>
+ 
+               <!--
+                 <div class="illustration-form">
+                   <img
+                     width="480"
+                     height="418"
+                     src='https://assets.astro-charts.com/site/illustration-form.webp' 
+                     srcset='https://assets.astro-charts.com/site/illustration-form.webp,
+                             https://assets.astro-charts.com/site/illustration-form@2x.webp 2x'
+                     alt="illustration of two women shoulder-to-shoulder relaxing underneath a warm sun" />
+                </div>
+               -->
+            </div><!--  end flex -->
+          </div><!--  end inner-wrap -->
+        </div>
+      </main>
+        </div>
+    <script> 
+     var daySelector = document.getElementById("daySelector");
+
+      for (var i = 1; i <= 31; i++) {
+        var option = document.createElement("option");
+        option.value = i;
+        option.text = i;
+        daySelector.add(option);
+      }
+      var monthSelector = document.getElementById("monthSelector");
+
+      for (var i = 1; i <= 12; i++) {
+        var option = document.createElement("option");
+        option.value = i;
+        option.text = i;
+        monthSelector.add(option);
+      }
+      var yearSelector = document.getElementById("yearSelector");
+
+      for (var i = 2024; i >=1990 ; i--) {
+        var option = document.createElement("option");
+        option.value = i;
+        option.text = i;
+        yearSelector.add(option);
+      }
+      var hourSelector = document.getElementById("hourSelector");
+
+      for (var i =1; i <=12 ; i++) {
+        var option = document.createElement("option");
+        option.value = i;
+        option.text = i;
+        hourSelector.add(option);
+      }
+      var minSelector = document.getElementById("minSelector");
+
+      for (var i =1; i <=60 ; i++) {
+        var option = document.createElement("option");
+        option.value = i;
+        option.text = i;
+        minSelector.add(option);
+      }
+      /*warning*/
+      function validateForm() {
+        // Get the selected values
+        var selectedMonth = document.getElementById('monthSelector').value;
+        var selectedDay = document.getElementById('daySelector').value;
+        var selectedYear = document.getElementById('yearSelector').value;
+        var selectedHour = document.getElementById('hourSelector').value;
+        var selectedMinute = document.getElementById('minSelector').value;
+
+        // Check if any of the values are empty
+        if (selectedMonth === '' || selectedDay === '' || selectedYear === '' || selectedHour === '' || selectedMinute === '') {
+            alert('Please fill in all the fields');
+        } else {
+            // Continue with your form submission or other actions
+            document.getElementById('add_chart_form').submit(); // Assuming you want to submit the form
+        }
+    }
+
+      /* birth chart calculation */
+      document.addEventListener("DOMContentLoaded", function () {
+    var createChartButton = document.getElementById("create_chart");
+
+    createChartButton.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // Get user input
+        var name = document.getElementById("your-name").value;
+        var geolocation = document.getElementById("your-geolocation").value;
+        var birthDate = getSelectedDate();
+        var birthTime = getSelectedTime();
+        var amRadio = document.getElementById("amRadio").checked ? "AM" : "PM";
+
+        // Display the input (replace this with your logic for creating a chart)
+        displayChartInfo(name, geolocation, birthDate, birthTime, amRadio);
+    });
+
+    function getSelectedDate() {
+        var month = document.getElementById("monthSelector").value;
+        var day = document.getElementById("daySelector").value;
+        var year = document.getElementById("yearSelector").value;
+
+        return month + "/" + day + "/" + year;
+    }
+
+    function getSelectedTime() {
+        var hour = document.getElementById("hourSelector").value;
+        var min = document.getElementById("minSelector").value;
+
+        return hour + ":" + min;
+    }
+
+    function displayChartInfo(name, geolocation, birthDate, birthTime, ampm) {
+        // Replace this with your logic to display or process the chart information
+        var resultDiv = document.querySelector(".error");
+        resultDiv.innerText = "Name: " + name +
+                              "\nGeolocation: " + geolocation +
+                              "\nBirth Date: " + birthDate +
+                              "\nBirth Time: " + birthTime + " " + ampm;
+    }
+});
+      </script>
+</body>
+</html>
+
